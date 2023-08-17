@@ -7,6 +7,7 @@ ROOT_DIR: Path = Path(__file__).absolute().parent.parent
 # file.close()
 results: list[str] = []
 
+
 def get_file_lines(filename: Path):
     file = open(filename)
     while True:
@@ -15,7 +16,6 @@ def get_file_lines(filename: Path):
             break
 
         yield line
-        
 
 
 for line in get_file_lines(ROOT_DIR / "rockyou.txt"):

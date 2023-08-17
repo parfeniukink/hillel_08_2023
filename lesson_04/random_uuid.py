@@ -1,5 +1,6 @@
 from typing import Generator
 from uuid import uuid4, UUID
+
 # The example of UUID v4
 # e6bcb25d-0c5b-44a3-bc70-f04eddef067b
 
@@ -8,6 +9,7 @@ used_uuids_by_user: dict[str, set[UUID]] = {}
 #     "john": {2a518aab-d286-4c0f-a90d-b5a3b58fc5c2, ...}
 #     "marry": {2a518aab-d286-4c0f-a90d-b5a3b58fc5c2, ...}
 # }
+
 
 def generate_unique_uuid_as_function(user: str) -> UUID:
     while True:
@@ -28,8 +30,8 @@ def generate_unique_uuid() -> Generator[UUID, None, None]:
             yield generated_uuid
 
 
-john_unique_uuid= generate_unique_uuid()
-marry_unique_uuid= generate_unique_uuid()
+john_unique_uuid = generate_unique_uuid()
+marry_unique_uuid = generate_unique_uuid()
 
 print(next(john_unique_uuid))
 print(next(john_unique_uuid))

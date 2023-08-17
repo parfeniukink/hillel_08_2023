@@ -7,12 +7,12 @@ text: str = file.readline()
 counter = 0
 
 while True:
-	try:
-		word = file.readline()
-		counter += 1
-		print(word)
-	except Exception:
-		break
+    try:
+        word = file.readline()
+        counter += 1
+        print(word)
+    except Exception:
+        break
 
 file.close()
 

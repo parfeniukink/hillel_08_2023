@@ -10,6 +10,7 @@ users: list[str] = ["john", "marry", "jack", "john", "marry", "mark"]
 #     users_seen.add(user)
 #     print(user)
 
+
 def dedup(collection):
     items = set()
     for item in collection:
@@ -17,6 +18,7 @@ def dedup(collection):
             continue
         yield item
         items.add(item)
+
 
 # for user in dedup(users):
 #     print(user)
