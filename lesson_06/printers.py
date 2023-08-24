@@ -39,7 +39,7 @@ def connect(printer: Printer):
 
 
 # instance = connect(print_document)
-# instance(printer, document)
+# instance(document)
 
 hp_black = Printer(name="HP Black", ip="10.10.10.2", port=33145)
 hp_white = Printer(name="HP White", ip="10.10.10.15", port=33145)
