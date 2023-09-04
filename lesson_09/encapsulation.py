@@ -30,6 +30,8 @@ class User:
         if name == "password":
             return "Access Denied!"
         return super().__getattribute__(name)
+        # super().__getattribute__(name)
+        # return None
 
     def login(self, entered_login: str, entered_password: str) -> None:
         if entered_login == self.username and entered_password == self._password:
