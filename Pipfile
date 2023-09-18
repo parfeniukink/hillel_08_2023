@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 requests = "~=2.31"
+httpx = "*"
 
 [dev-packages]
 black = "~=23.7"
@@ -13,6 +14,7 @@ isort = "~=5.12"
 ipdb = "*"
 pympler = "~=1.0"
 mypy = "~=1.5"
+grequests = "*"
 
 [requires]
 python_version = "3.11"
