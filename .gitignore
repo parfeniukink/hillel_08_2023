@@ -4,3 +4,4 @@ venv
 rockyou.txt
 .vscode/
 something.log
+__pycache__/
