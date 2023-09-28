@@ -55,32 +55,37 @@ salad = Dish(
 )
 
 
-dishes = [pizza, salad]
+def run():
+    dishes = [pizza, salad]
 
-# regular execution
-# for dish in dishes:
-#     Kitchen.cook(dish)
+    # regular execution
+    # for dish in dishes:
+    #     Kitchen.cook(dish)
 
-# concurrent execution
-# threads = [
-#     Thread(
-#         target=Kitchen.cook,
-#         args=(dish,),
-#     )
-#     for dish in dishes
-# ]
+    # concurrent execution
+    # threads = [
+    #     Thread(
+    #         target=Kitchen.cook,
+    #         args=(dish,),
+    #     )
+    #     for dish in dishes
+    # ]
 
-# for thread in threads:
-#     thread.start()
+    # for thread in threads:
+    #     thread.start()
 
-# for thread in threads:
-#     thread.join()
+    # for thread in threads:
+    #     thread.join()
 
-# processes
-tasks = [Process(target=Kitchen.cook, args=[dish]) for dish in dishes]
+    # processes
+    tasks = [Process(target=Kitchen.cook, args=[dish]) for dish in dishes]
 
-for task in tasks:
-    task.start()
+    for task in tasks:
+        task.start()
 
-for task in tasks:
-    task.join()
+    for task in tasks:
+        task.join()
+
+
+if __name__ == "__main__":
+    run()
